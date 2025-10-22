@@ -9,7 +9,9 @@ export const router = createBrowserRouter([
         children:[
             {
                 index:true,
-                Component:Home
+                Component:Home,
+                loader:()=>fetch('/gameData.json'),
+                hydrateFallbackElement:<p>Loading...</p>
             }
         ]
     }

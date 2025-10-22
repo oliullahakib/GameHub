@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Footer = () => {
     return (
-        <footer className="footer justify-between text-lg sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <footer className="footer justify-center md:justify-between text-lg md:footer-horizontal bg-neutral text-neutral-content md:p-10">
             <div className=''>
                 <Link to={"/"} className=" cursor-pointer text-2xl oswald-font">Game<span className='text-primary font-bold'>Hub</span></Link>
                 <p className='text-accent w-80'>Way to Find your Happiness. Yes!! it is the place where you find your entertenment.</p>

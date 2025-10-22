@@ -17,12 +17,15 @@ export const router = createBrowserRouter([
             },
             {
                 path:"/app-details/:id",
-                Component:AppDetails
+                Component:AppDetails,
+                loader:()=>fetch('/gameData.json'),
+                 hydrateFallbackElement:<p>Loading...</p>
             },
             {
                 path:'/all-apps',
                 Component:AllApps,
-                 loader:()=>fetch('/gameData.json')
+                 loader:()=>fetch('/gameData.json'),
+                 hydrateFallbackElement:<p>Loading...</p>
             }
         ]
     }

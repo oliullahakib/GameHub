@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+@import "tailwindcss";
+ @plugin "daisyui" {
+   themes: dark --default;
+ }
+ @plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  --color-primary: #99EE2D;
+  --color-secondary: #F5FFE6;
+  --color-base-200: #DDDAD0;
+  --color-base-300: #57564F;
+  --color-accent: #7A7A73;
+}
+a.active{
+  border-bottom: 2px solid rgba(62, 122, 62, 0.726);
+  color:#91C4C3 ;
+  font-weight: bold;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+.oswald-font {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -4,6 +4,7 @@ import Banner from '../components/Banner';
 import GameCard from '../components/GameCard';
 import MyContainer from '../components/MyContainer';
 import { FaArrowRight } from 'react-icons/fa';
+import NewsLetter from '../components/NewsLetter';
 const Home = () => {
     const gameData = useLoaderData();
     const top_3app = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 3)
@@ -29,6 +30,9 @@ const Home = () => {
                         </div>
                     </MyContainer>
                 </section>
+               <section className='news-letter '>
+                <NewsLetter/>
+               </section>
             </main>
         </div>
     );

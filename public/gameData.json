@@ -1,0 +1,134 @@
+[
+  {
+    "id": "6",
+    "title": "Call of Duty: Mobile",
+    "iconImage": "https://play-lh.googleusercontent.com/Gs0Dhk2VSUFn25alS7iia6BTQO_B8sv_CYTH4UpdpcYnD2Jf3BPS-6ESSPL3u6RJsH4=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/cGmgD7rit6-6EizCX0I4qEHKvj7ON4jIIGaNxIBEdN7aKh-cG2u4Kiv162qHR1keFnuJLVsDlsjlfG4-LmUYSw=w1052-h592-rw",
+    "category": "FPS",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&rdid=com.activision.callofduty.shooter&feature=md&offerId",
+    "description": "Experience the legendary console-quality FPS gameplay on your mobile device. Includes multiplayer modes like Team Deathmatch and a massive Battle Royale.",
+    "ratings": "4.3",
+    "developer": "Activision Publishing, Inc."
+  },
+  {
+    "id": "7",
+    "title": "Pokémon GO",
+    "iconImage": "https://play-lh.googleusercontent.com/cKbYQSRgvec6n2oMJLVRWqHS8BsH9AxBp-cFGrGqve3CpE4EmI3Ofej1RCUciQbqhebCfiDIomUQINqzIL4I7kk=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/gicEDV-BJc1PY13rLDGuebXNGHsk_GF4GCdFWAtCooyW_Xw_qNDUyYF-bopl19W0Hqs=w5120-h2880-rw",
+    "category": "Adventure",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&rdid=com.nianticlabs.pokemongo&feature=md&offerId",
+    "description": "Explore the real world to discover, catch, train, and battle over 700 Pokémon using augmented reality (AR) technology.",
+    "ratings": "3.9",
+    "developer": "Niantic, Inc."
+  },
+  {
+    "id": "8",
+    "title": "Clash Royale",
+    "iconImage": "https://play-lh.googleusercontent.com/gnSC6s8-6Tjc4uhvDW7nfrSJxpbhllzYhgX8y374N1LYvWBStn2YhozS9XXaz1T_Pi2q=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/UOJ0N42bDu2lUbZIx4n9UCnHtnY5IEyG1jOLXByCbbCvi6wammxVR4XC9endWA5rAA=w1052-h592-rw",
+    "category": "Strategy",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.supercell.clashroyale&rdid=com.supercell.clashroyale&feature=md&offerId",
+    "description": "Collect and upgrade dozens of cards featuring Clash of Clans troops, spells, and defenses, and battle opponents in real-time.",
+    "ratings": "4.4",
+    "developer": "Supercell"
+  },
+  {
+    "id": "9",
+    "title": "Temple Run 2",
+    "iconImage": "https://play-lh.googleusercontent.com/go4XqS4mYs-G2tZymiVLF4wJYXIi5QrvwixNRzssk4G_vRBHrAdg4E1ddNwy9c2cZA=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/3ScaC-JA7y2Iray1131ddXPMap-6E5jrAh0wxGtLzvw4u56G8DNfhbDs6Elk_fgjcw=w1052-h592-rw",
+    "category": "Arcade",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.imangi.templerun2&rdid=com.imangi.templerun2&feature=md&offerId",
+    "description": "The thrilling sequel to the original endless running game. Navigate treacherous cliffs, zip lines, mines, and forests as you escape with the cursed idol.",
+    "ratings": "4.5",
+    "developer": "Imangi Studios"
+  },
+  {
+    "id": "10",
+    "title": "Honkai: Star Rail",
+    "iconImage": "https://play-lh.googleusercontent.com/IqXUfiwbK-NCu5KyyK9P3po1kd4ZPOC4QJVWRk2ooJXnUcSpkCUQRYYJ-9vZkCEnPOxDIEWjNpS30OwHNZTtCKw=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/D0nHhYFtmtplNVIzWV3bfGdtgnLQS19VuehbNgJnpPeF8GKEu0BEkiBTVotspyARMfUJ_92nLtSCeK5vQ4NKXA=w1052-h592-rw",
+    "category": "Turn-Based RPG",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.HoYoverse.hkrpgoversea&rdid=com.HoYoverse.hkrpgoversea&feature=md&offerId",
+    "description": "A new space fantasy RPG from HoYoverse. Board the Astral Express and experience the boundless universe with deep, strategic turn-based combat.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "11",
+    "title": "8 Ball Pool",
+    "iconImage": "https://play-lh.googleusercontent.com/hQhhRY3t6JtB_lZ9y7SEwZkpHzow2AViEQnLvZXuvhn4MEfqXBtuH88Z0aRsiK15fU2A=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/9XIgjYe8UE7IVSsycqNEAzIteLWDXlaE0AVbLYxq1lIOsV5IQf5VyHTPpyKnkBxW7WY=w1052-h592-rw",
+    "category": "Sports",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.miniclip.eightballpool&rdid=com.miniclip.eightballpool&feature=md&offerId",
+    "description": "The world’s most popular pool game. Play with friends, take on the legend in the 8 Ball Pool competitive scene, and unlock new cues and arenas.",
+    "ratings": "4.4",
+    "developer": "Miniclip"
+  },
+  {
+    "id": "12",
+    "title": "Gardenscapes",
+    "iconImage": "https://play-lh.googleusercontent.com/SffnlIy-_lnakKGEko_-Y8qdOpPen3on0kAI_cs_HOLpB8jKz5lh0rUR7MAt1mv6ow=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/2dcg0pjWlSKjeraQVuLFXVE4dQ8Afl12Hw89G0qCvkbX1FIJ34KKBNAwqEWBdVXimFE=w1052-h592-rw",
+    "category": "Puzzle",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.playrix.gardenscapes&rdid=com.playrix.gardenscapes&feature=md&offerId",
+    "description": "Welcome to Gardenscapes! Solve match-3 puzzles to restore a wonderful garden to its former glory. Enjoy a storyline full of twists and meet fun characters.",
+    "ratings": "4.4",
+    "developer": "Playrix"
+  },
+  {
+    "id": "13",
+    "title": "Asphalt 9: Legends",
+    "iconImage": "https://play-lh.googleusercontent.com/C1O15FL45-ma-rfTgnWgIp_5reJDb3NX7Bk4T-Q8amjBYu_REDO-DQ6JSKIfWOa57u8=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/BJ-Lb_kL7F_RcKl2F1p9m3CdXryDgUQHd5C0dg8H7D0_nxoMpN702UrOX8GLhx-FC-lxT7FZ7L5f4ySLoxy2=w1052-h592-rw",
+    "category": "Racing",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA9HM&rdid=com.gameloft.android.ANMP.GloftA9HM&feature=md&offerId",
+    "description": "Choose your dream car and race across dynamic real-world locations. Perform spectacular stunts and use Nitro to become a Legend of the road.",
+    "ratings": "4.4",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "14",
+    "title": "Ludo King",
+    "iconImage": "https://play-lh.googleusercontent.com/AwrQb4bJk-34pw_ye7VhjDN0Azraz_pYYq9s5FbcapiF7qfxbYYvqWl-TjIF9xJIeA=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/0CEVKudlzo2Rae1qRvQmp3OAfYIe0sdymw_oPPjZRbTpZPPHhOl46SH0vA7MKWWU_5LC=w1052-h592-rw",
+    "category": "Board",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.ludo.king&rdid=com.ludo.king&feature=md&offerId",
+    "description": "The modern version of the royal game of Pachisi. Play with friends, family & kids in multiplayer mode, or challenge the computer.",
+    "ratings": "4.2",
+    "developer": "Gametion Technologies Pvt Ltd"
+  },
+  {
+    "id": "15",
+    "title": "Block Blast Adventure Master",
+    "iconImage": "https://play-lh.googleusercontent.com/WotK5GfCgTe69RepLXEfxvJwbxdKUrgveCm1q3LviwJnkw8KZEv4_SzzJEFduIySxpAA=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/miONvpG_ZOqIV_3esTtTR19IRqAe7tUfp4pstEgp9JP9HgGfuHwk8lbPFjScGP2T7DQ=w1052-h592-rw",
+    "category": "Puzzle",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.starwaves.blockpuzzle&rdid=com.starwaves.blockpuzzle&feature=md&offerId",
+    "description": "A classic block puzzle game that challenges you to match various colored blocks to clear lines and rows. Simple, yet highly addictive gameplay.",
+    "ratings": "4.7",
+    "developer": "Hungry Studio"
+  },
+  {
+    "id": "16",
+    "title": "PUBG MOBILE",
+    "iconImage": "https://play-lh.googleusercontent.com/zCSGnBtZk0Lmp1BAbyaZfLktDzHmC6oke67qzz3G1lBegAF2asyt5KzXOJ2PVdHDYkU=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/EgZ6v0EAothJJX6dcnzJ7dIosXmZhlIpUCUIJMyIhbxw0AOYiUangj1LcyU7Vt3tCfiQtCKmlY-pnTW3yO4krA=w1052-h592-rw",
+    "category": "Action",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.tencent.ig&rdid=com.tencent.ig&feature=md&offerId",
+    "description": "The original Battle Royale game, now on mobile. A massive 100-player deathmatch where you must scavenge, fight, and strategize to be the last one standing.",
+    "ratings": "4.3",
+    "developer": "Level Infinite"
+  },
+  {
+    "id": "17",
+    "title": "Free Fire",
+    "iconImage": "https://play-lh.googleusercontent.com/Ozmaqzz_vAlsyvGO-Sv6MYhZGzh_uWqXcNg3GXV6Qsvlz-sEAyO6RATTWhgvcGO7jgu1cQV7H5RWVsgZvbqX=s96-rw",
+    "coverPhoto": "https://play-lh.googleusercontent.com/lC6KlHUFjerfg5uMJosB8dLQN2FZWx1yTK8D5tqpCFPw3UpMwkAa2Pp0EiH9qJWiQdtbyZJjYiswlJERPtXKjw=w1052-h592-rw",
+    "category": "Action",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.dts.freefireth&rdid=com.dts.freefireth&feature=md&offerId",
+    "description": "A fast-paced survival shooter. Each 10-minute game pits you against 49 other players, all seeking survival in a quick, intense battle royale experience.",
+    "ratings": "4.2",
+    "developer": "Garena International I"
+  }
+]

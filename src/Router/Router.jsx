@@ -21,8 +21,8 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/all-apps',
-                Component:AllApps
-
+                Component:AllApps,
+                 loader:()=>fetch('/gameData.json')
             }
         ]
     }

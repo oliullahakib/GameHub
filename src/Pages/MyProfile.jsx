@@ -1,9 +1,11 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Context/AuthContext';
 import { Link } from 'react-router';
+import Loading from './Loading';
 
 const MyProfile = () => {
-    const{user}=use(AuthContext);
+    const{user,loading}=use(AuthContext);
+    if(loading)return <Loading/>
     return (
         <div className='flex justify-center items-center min-h-screen'>
             <title>Game Hub - My Profile</title>
@@ -15,8 +17,8 @@ const MyProfile = () => {
                         alt={user?.displayName} />
                 </figure>
                 <div className="flex flex-col items-center justify-center mt-3">
-                    <h2 className="card-title">{user.displayName}</h2>
-                    <p className='text-accent'>{user.email}</p>
+                    <h2 className="card-title">{user?.displayName}</h2>
+                    <p className='text-accent'>{user?.email}</p>
                     <div className="card-actions justify-end">
                         <Link to={"/profile/update-profile"} className="btn border-none shadow-none my-5 bg-[#071952]">Update Profile</Link>
                     </div>

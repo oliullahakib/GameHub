@@ -7,7 +7,7 @@ const AppDetails = () => {
     const { id } = useParams();
     const allGames = useLoaderData();
     const singleGame = allGames.find(game => game.id === id)
-    console.log(singleGame)
+    // console.log(singleGame)
     const { title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings } = singleGame;
     return (
         <>

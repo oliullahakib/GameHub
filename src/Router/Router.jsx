@@ -8,6 +8,7 @@ import AllApps from "../Pages/AllApps";
 import MyProfile from "../Pages/MyProfile";
 import UpdateMyProfile from "../Pages/UpdateMyProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Loading from "../Pages/Loading";
 
 export const router = createBrowserRouter([
     {
@@ -18,19 +19,19 @@ export const router = createBrowserRouter([
                 index:true,
                 Component:Home,
                 loader:()=>fetch('/gameData.json'),
-                hydrateFallbackElement:<p>Loading...</p>
+                hydrateFallbackElement:<Loading/>
             },
             {
                 path:"/app-details/:id",
                 element:<PrivateRoute><AppDetails/></PrivateRoute>,
                 loader:()=>fetch('/gameData.json'),
-                 hydrateFallbackElement:<p>Loading...</p>
+                 hydrateFallbackElement:<Loading/>
             },
             {
                 path:'/all-apps',
                 Component:AllApps,
                  loader:()=>fetch('/gameData.json'),
-                 hydrateFallbackElement:<p>Loading...</p>
+                 hydrateFallbackElement:<Loading/>
             },
             {
                 path:"/login",

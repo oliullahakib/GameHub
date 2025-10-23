@@ -1,10 +1,12 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import { toast } from 'react-toastify';
 
 const Register = () => {
-    const { creatUser, updateUser, googleLogin } = use(AuthContext)
+    const { creatUser, updateUser, googleLogin } = use(AuthContext);
+    const navigate = useNavigate();
     const [show, setShow] = useState(false);
     const [passError, setPassError] = useState('');
     const [nameError, setNameError] = useState('');
@@ -38,26 +40,27 @@ const Register = () => {
                 // update user 
                 updateUser(currentUser, { displayName, photoURL })
                     .then(() => {
-                        console.log("register", { currentUser });
+                        toast.success("User Created Successfully");
+                        navigate('/')
                     }).catch((error) => {
-                        console.log("update user: ", error)
+                        toast.error(error)
                     });
 
             })
             .catch((error) => {
                 const errorCode = error.code;
-                console.log(errorCode)
+                toast.error(errorCode)
             });
 
     }
     const handleGoogleLogin = () => {
         googleLogin()
-            .then((result) => {
-                const user = result.user;
-                console.log(user)
+            .then(() => {
+                toast.success("User Created Successfully");
+                navigate("/")
             }).catch((error) => {
                 const errorCode = error.code;
-                console.log(errorCode)
+                 toast.error(errorCode)
             });
     }
     return (

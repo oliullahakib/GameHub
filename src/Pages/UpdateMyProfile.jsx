@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 
 const UpdateMyProfile = () => {
-    const { updateUser, user } = use(AuthContext);
+    const { updateUser, user,setLoading } = use(AuthContext);
     const navigate = useNavigate();
     const handleUpdateUser = (e) => {
         e.preventDefault();
@@ -15,6 +15,7 @@ const UpdateMyProfile = () => {
         updateUser(user, { displayName, photoURL })
             .then(() => {
                 toast.success("Update User Successfully");
+                setLoading(false);
                 navigate("/profile");
             }).catch((error) => {
                 toast.error(error)

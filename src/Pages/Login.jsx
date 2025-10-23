@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const Login = () => {
     const { loginUser, googleLogin } = use(AuthContext);
     const location = useLocation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [show, setShow] = useState(false)
     const handleLogin = (e) => {
         e.preventDefault();
@@ -19,8 +19,9 @@ const Login = () => {
                 navigate(`${location?.state ? location?.state : "/"}`);
             })
             .catch((error) => {
-                const errorCode = error.code;
-                toast.error(errorCode);
+                if(error.code==="auth/invalid-credential"){
+                    toast.error('User Invalid')
+                };
             });
     }
     const handleGoogleLogin = () => {

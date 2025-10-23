@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../Context/AuthContext';
+import { div } from 'motion/react-client';
 
 const Navbar = () => {
+    const { logOutUser, user } = use(AuthContext)
+    const handleLogout = () => {
+        logOutUser()
+            .then(() => {
+                console.log("Logout Successfully")
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
     const links = <>
         <li> <NavLink to={"/"}>Home</NavLink></li>
         <li> <NavLink to={"/all-apps"}>All Apps</NavLink></li>
         <div className='flex flex-col lg:flex-row'>
-            <li> <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link></li>
-            <li> <Link className="btn btn-secondary text-black" to={"/register"}>Register</Link></li>
+            {
+                user ?
+                    <div className='flex'>
+                        <li> <button onClick={handleLogout} className="btn btn-error text-black" >Logout</button></li>
+                        <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3 hidden lg:block' src="https://img.icons8.com/color/48/businessman.png" alt="" /></Link>
+                    </div>
+                    :
+                    <div className='flex'>
+                        <li> <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link></li>
+                        <li> <Link className="btn btn-secondary text-black" to={"/register"}>Register</Link></li>
+                    </div>
+            }
+
         </div>
-        <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3 hidden lg:block' src="https://img.icons8.com/color/48/businessman.png" alt="" /></Link>
     </>
     return (
         <div>

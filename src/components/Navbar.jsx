@@ -6,8 +6,8 @@ const Navbar = () => {
         <li> <NavLink to={"/"}>Home</NavLink></li>
         <li> <NavLink to={"/all-apps"}>All Apps</NavLink></li>
         <div className='flex flex-col lg:flex-row'>
-            <li> <NavLink className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</NavLink></li>
-            <li> <NavLink className="btn btn-secondary text-black" to={"/register"}>Register</NavLink></li>
+            <li> <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link></li>
+            <li> <Link className="btn btn-secondary text-black" to={"/register"}>Register</Link></li>
         </div>
         <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3 hidden lg:block' src="https://img.icons8.com/color/48/businessman.png" alt="" /></Link>
     </>

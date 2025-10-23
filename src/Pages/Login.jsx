@@ -20,7 +20,7 @@ const Login = () => {
                 const errorCode = error.code;
                console.log("login",errorCode);
             });
-       
+    
     }
     return (
         <div className="hero min-h-screen">

@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AllApps from "../Pages/AllApps";
 import MyProfile from "../Pages/MyProfile";
+import UpdateMyProfile from "../Pages/UpdateMyProfile";
 
 export const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path:"/profile",
                 Component:MyProfile
+            },
+            {
+                path:"/profile/update-profile",
+                Component:UpdateMyProfile
             }
         ]
     }

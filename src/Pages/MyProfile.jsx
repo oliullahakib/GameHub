@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Context/AuthContext';
+import { Link } from 'react-router';
 
 const MyProfile = () => {
     const{user}=use(AuthContext);
@@ -9,14 +10,14 @@ const MyProfile = () => {
                 <figure>
                     <img
                         className='w-40 h-40 rounded-full mt-5'
-                        src={user.photoURL}
-                        alt={user.displayName} />
+                        src={user?.photoURL}
+                        alt={user?.displayName} />
                 </figure>
                 <div className="flex flex-col items-center justify-center mt-3">
                     <h2 className="card-title">{user.displayName}</h2>
                     <p className='text-accent'>{user.email}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn border-none shadow-none my-5 bg-[#071952]">Update Profile</button>
+                        <Link to={"/profile/update-profile"} className="btn border-none shadow-none my-5 bg-[#071952]">Update Profile</Link>
                     </div>
                 </div>
             </div>

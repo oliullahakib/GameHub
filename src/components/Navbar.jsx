@@ -1,10 +1,11 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
-import { div } from 'motion/react-client';
+import { FaRegUser } from 'react-icons/fa';
 
 const Navbar = () => {
-    const { logOutUser, user } = use(AuthContext)
+    const { logOutUser, user } = use(AuthContext);
+    console.log(user)
     const handleLogout = () => {
         logOutUser()
             .then(() => {
@@ -20,12 +21,12 @@ const Navbar = () => {
         <div className='flex flex-col lg:flex-row'>
             {
                 user ?
-                    <div className='flex'>
+                    <div className='flex lg:ml-5'>
                         <li> <button onClick={handleLogout} className="btn btn-error text-black" >Logout</button></li>
-                        <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3 hidden lg:block' src="https://img.icons8.com/color/48/businessman.png" alt="" /></Link>
+                        <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3 hidden lg:block' src={user.photoURL?user.photoURL:<FaRegUser />} alt="" /></Link>
                     </div>
                     :
-                    <div className='flex'>
+                    <div className='flex ml-5'>
                         <li> <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link></li>
                         <li> <Link className="btn btn-secondary text-black" to={"/register"}>Register</Link></li>
                     </div>
@@ -43,7 +44,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-3">
                             {
                                 links
                             }

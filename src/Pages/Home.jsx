@@ -8,7 +8,7 @@ import NewsLetter from '../components/NewsLetter';
 const Home = () => {
     const gameData = useLoaderData();
     const top_3app = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 3)
-    console.log(top_3app)
+    // console.log(top_3app)
     return (
         <div>
             <header >
@@ -20,7 +20,7 @@ const Home = () => {
                         <h2 className='text-xl font-semibold my-8'>Popular Games</h2>
                         <div className="card-container grid grid-cols-1 lg:grid-cols-3 gap-4">
                             {
-                                top_3app.map(app => <GameCard app={app} />)
+                                top_3app.map(app => <GameCard key={app.id} app={app} />)
                             }
                         </div>
                         <div className='flex justify-center'>

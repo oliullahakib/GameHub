@@ -7,6 +7,7 @@ import Register from "../Pages/Register";
 import AllApps from "../Pages/AllApps";
 import MyProfile from "../Pages/MyProfile";
 import UpdateMyProfile from "../Pages/UpdateMyProfile";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:"/app-details/:id",
-                Component:AppDetails,
+                element:<PrivateRoute><AppDetails/></PrivateRoute>,
                 loader:()=>fetch('/gameData.json'),
                  hydrateFallbackElement:<p>Loading...</p>
             },

@@ -1,11 +1,12 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-    const { loginUser,googleLogin } = use(AuthContext);
+    const { loginUser, googleLogin } = use(AuthContext);
+    const location = useLocation();
     const navigate = useNavigate()
     const [show, setShow] = useState(false)
     const handleLogin = (e) => {
@@ -14,19 +15,19 @@ const Login = () => {
         const password = e.target.password.value;
         loginUser(email, password)
             .then(() => {
-              toast.success("Login Successfully");
-              navigate('/');
+                toast.success("Login Successfully");
+                navigate(`${location?.state ? location?.state : "/"}`);
             })
             .catch((error) => {
                 const errorCode = error.code;
-               toast.error(errorCode);
+                toast.error(errorCode);
             });
     }
-     const handleGoogleLogin = () => {
+    const handleGoogleLogin = () => {
         googleLogin()
             .then(() => {
                 toast.success("Login Successfully");
-              navigate('/');
+                navigate(`${location?.state ? location?.state : "/"}`);
             }).catch((error) => {
                 const errorCode = error.code;
                 toast.error(errorCode);
@@ -34,7 +35,7 @@ const Login = () => {
     }
     return (
         <div className="hero min-h-screen">
-             <title>Game Hub - Login</title>
+            <title>Game Hub - Login</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="card bg-[#2F3645] w-full min-w-96 shrink-0 shadow-2xl">
                     <div className="card-body">

@@ -22,6 +22,7 @@ const UpdateMyProfile = () => {
     }
     return (
         <div className='flex justify-center items-center min-h-screen'>
+            <title>Game Hub - My Profile</title>
             <div className="card bg-[#08839520] min-w-82 lg:min-w-96 shadow-sm p-5 space-y-2">
                 <form onSubmit={handleUpdateUser} className='flex flex-col' >
                     {/* Name  */}

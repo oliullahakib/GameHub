@@ -1,34 +1,35 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import { toast } from 'react-toastify';
 
 const Login = () => {
-    const { loginUser,googleLogin } = use(AuthContext)
+    const { loginUser,googleLogin } = use(AuthContext);
+    const navigate = useNavigate()
     const [show, setShow] = useState(false)
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         loginUser(email, password)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-              console.log("login",user);
+            .then(() => {
+              toast.success("Login Successfully");
+              navigate('/');
             })
             .catch((error) => {
                 const errorCode = error.code;
-               console.log("login",errorCode);
+               toast.error(errorCode);
             });
     }
      const handleGoogleLogin = () => {
         googleLogin()
-            .then((result) => {
-                const user = result.user;
-                console.log(user)
+            .then(() => {
+                toast.success("Login Successfully");
+              navigate('/');
             }).catch((error) => {
                 const errorCode = error.code;
-                console.log(errorCode)
+                toast.error(errorCode);
             });
     }
     return (

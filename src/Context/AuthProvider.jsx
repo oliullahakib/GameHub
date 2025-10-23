@@ -9,14 +9,13 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const creatUser = (email, password) => {
-        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
     const loginUser = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     };
     const updateUser = (user, userObj) => {
-        setLoading(true)
+        setLoading(true);
         return updateProfile(user, userObj);
     };
     const googleLogin = () => {

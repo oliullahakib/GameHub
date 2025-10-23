@@ -40,7 +40,7 @@ const Login = () => {
         <div className="hero min-h-screen">
             <title>Game Hub - Login</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="card bg-[#2F3645] w-full min-w-96 shrink-0 shadow-2xl">
+                <div className="card bg-[#2F3645] w-full md:min-w-96 shrink-0 shadow-2xl">
                     <div className="card-body">
                         <h1 className="text-6xl font-bold border-b border-base-200 pb-5 text-center oswald-font">Login Now!</h1>
                         <form onSubmit={handleLogin} className="fieldset text-accent">

@@ -41,7 +41,7 @@ const Register = () => {
                 updateUser(currentUser, { displayName, photoURL })
                     .then(() => {
                         toast.success("User Created Successfully");
-                        setLoading(false)
+                        setLoading(false);
                         navigate('/')
                     }).catch((error) => {
                         toast.error(error)
@@ -51,6 +51,7 @@ const Register = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 toast.error(errorCode)
+                 setLoading(false);
             });
 
     }
@@ -58,19 +59,21 @@ const Register = () => {
         googleLogin()
             .then(() => {
                 toast.success("User Created Successfully");
+                 setLoading(false);
                 navigate("/")
             }).catch((error) => {
                 const errorCode = error.code;
                  toast.error(errorCode)
+                  setLoading(false);
             });
     }
     return (
         <div className="hero min-h-screen">
              <title>Game Hub - Register</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="card bg-[#2F3645] w-full min-w-96 shrink-0 shadow-2xl">
+                <div className="card bg-[#2F3645] w-full lg:min-w-96 shrink-0 shadow-2xl">
                     <div className="card-body">
-                        <h1 className="text-6xl font-bold border-b border-base-200 pb-5 text-center oswald-font">Register Now!</h1>
+                        <h1 className="text-3xl md:text-6xl font-bold border-b border-base-200 pb-5 text-center oswald-font">Register Now!</h1>
                         <form onSubmit={handleRegister} className="fieldset text-accent">
                             {/* Name  */}
                             <label className="label">Name</label>

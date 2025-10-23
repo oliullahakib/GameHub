@@ -5,7 +5,7 @@ import { FaRegUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    const { logOutUser, user, } = use(AuthContext);
+    const { logOutUser, user } = use(AuthContext);
     const navigate = useNavigate()
     // console.log(user)
     const handleLogout = () => {
@@ -62,7 +62,9 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3  lg:hidden' src="https://img.icons8.com/color/48/businessman.png" alt="" /></Link>
+                {
+                    user&&<Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3  lg:hidden' src={user?.photoURL} alt="" /></Link>
+                }
             </div>
         </div>
     );

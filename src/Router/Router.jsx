@@ -2,7 +2,9 @@ import { createBrowserRouter } from "react-router";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home";
 import AppDetails from "../components/AppDetails";
-import AllApps from "../components/AllApps";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import AllApps from "../Pages/AllApps";
 
 export const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ export const router = createBrowserRouter([
                 Component:AllApps,
                  loader:()=>fetch('/gameData.json'),
                  hydrateFallbackElement:<p>Loading...</p>
+            },
+            {
+                path:"/login",
+                Component:Login
+            },
+            {
+                path:'/register',
+                Component:Register
             }
         ]
     }

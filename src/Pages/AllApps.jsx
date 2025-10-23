@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
-import GameCard from './GameCard';
+import GameCard from '../components/GameCard';
+
 
 const AllApps = () => {
     const gameData = useLoaderData();

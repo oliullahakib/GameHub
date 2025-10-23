@@ -3,13 +3,32 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const Register = () => {
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false);
+    const [passError, setPassError] = useState('');
+    const [nameError, setNameError] = useState('');
     const handleRegister = (e) => {
         e.preventDefault();
+        // reset value 
+        setPassError("");
+        setNameError("");
         const name = e.target.name.value;
+        const nameCheck = name.trim().length>=5;
+        if(!nameCheck){
+            return setNameError("Name must be at least 5 character")
+        }
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        // varification 
+        // length check 
+        const minLengthRegEx = /^.{6,}$/;
+        if (!minLengthRegEx.test(password)) return setPassError("Length must be at least 6 character");
+        // upperCase check 
+        const upperCaseRegEX = /(?=.*[A-Z])/;
+        if (!upperCaseRegEX.test(password)) return setPassError("Must have an Uppercase letter in the password");
+        // lowerCase check 
+        const lowerCaseRegEX = /(?=.*[a-z])/;
+        if (!lowerCaseRegEX.test(password)) return setPassError("Must have a Lowercase letter in the password");
         console.log("register", { name, email, password, photo });
     }
     return (
@@ -22,6 +41,7 @@ const Register = () => {
                             {/* Name  */}
                             <label className="label">Name</label>
                             <input required name='name' type="text" className="input" placeholder="Name" />
+                            <p className='text-red-400'>{nameError}</p>
                             {/* Photo URL  */}
                             <label className="label"> Photo URL </label>
                             <input required name='photo' type="text" className="input" placeholder=" Photo URL " />
@@ -37,6 +57,7 @@ const Register = () => {
                                         show ? <FaEyeSlash /> : <FaEye />
                                     }
                                 </span>
+                                <p className='text-red-400'>{passError}</p>
                             </div>
 
                             <button className="btn btn-secondary text-black mt-4 mb-2">Register</button>

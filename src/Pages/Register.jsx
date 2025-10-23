@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
+import { AuthContext } from '../Context/AuthContext';
 
 const Register = () => {
+    const { creatUser } = use(AuthContext)
     const [show, setShow] = useState(false);
     const [passError, setPassError] = useState('');
     const [nameError, setNameError] = useState('');
@@ -12,8 +14,8 @@ const Register = () => {
         setPassError("");
         setNameError("");
         const name = e.target.name.value;
-        const nameCheck = name.trim().length>=5;
-        if(!nameCheck){
+        const nameCheck = name.trim().length >= 5;
+        if (!nameCheck) {
             return setNameError("Name must be at least 5 character")
         }
         const photo = e.target.photo.value;
@@ -29,7 +31,17 @@ const Register = () => {
         // lowerCase check 
         const lowerCaseRegEX = /(?=.*[a-z])/;
         if (!lowerCaseRegEX.test(password)) return setPassError("Must have a Lowercase letter in the password");
-        console.log("register", { name, email, password, photo });
+        creatUser(email,password)
+            .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                console.log("register", { user });
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                console.log(errorCode)
+            });
+        
     }
     return (
         <div className="hero min-h-screen">

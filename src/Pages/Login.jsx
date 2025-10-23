@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router';
+import { AuthContext } from '../Context/AuthContext';
 
 const Login = () => {
+    const { loginUser } = use(AuthContext)
     const [show, setShow] = useState(false)
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log("login", { email, password });
+        loginUser(email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+              console.log("login",user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+               console.log("login",errorCode);
+            });
+       
     }
     return (
         <div className="hero min-h-screen">

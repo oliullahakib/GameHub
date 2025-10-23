@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const { loginUser, googleLogin } = use(AuthContext);
+    const [email, setEmail] = useState('');
+    console.log(email)
     const location = useLocation();
     const navigate = useNavigate();
     const [show, setShow] = useState(false)
@@ -44,7 +46,7 @@ const Login = () => {
                         <form onSubmit={handleLogin} className="fieldset text-accent">
                             {/* email  */}
                             <label className="label">Email</label>
-                            <input required name='email' type="email" className="input" placeholder="Example@gamil.com" />
+                            <input onChange={(e)=>setEmail(e.target.value)} required name='email' type="email" className="input" placeholder="Example@gamil.com" />
                             {/* password  */}
                             <div className='relative'>
                                 <label className="label">Password</label>
@@ -56,7 +58,7 @@ const Login = () => {
                                 </span>
                             </div>
 
-                            <div><a className="link link-hover">Forgot password?</a></div>
+                            <div><Link state={email} to={"/forgot-password"} className="link link-hover">Forgot password?</Link></div>
                             <button className="btn btn-primary text-black mt-4 ">Login</button>
 
                             <div className='flex items-center'>

@@ -34,15 +34,17 @@ const AppDetails = () => {
                             </div>
                         </div>
                         <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
+                        <div className='my-5'>
+                            <h2 className='text-xl '>Description</h2>
+                            <p className='text-accent'>
+                                {description}
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-            <div className='m-3 sm:my-5'>
-                <h2 className='text-xl '>Description</h2>
-                <p className='text-accent lg:w-1/2'>
-                    {description}
-                </p>
-            </div>
+
         </>
     );
 };

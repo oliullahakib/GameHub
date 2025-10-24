@@ -10,6 +10,8 @@ import UpdateMyProfile from "../Pages/UpdateMyProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Loading from "../Pages/Loading";
 import ForgotPassword from "../Pages/ForgotPassword";
+import Error404 from "../Pages/Error404";
+import AppNotFound from "../Pages/AppNotFound";
 
 export const router = createBrowserRouter([
     {
@@ -26,7 +28,8 @@ export const router = createBrowserRouter([
                 path:"/app-details/:id",
                 element:<PrivateRoute><AppDetails/></PrivateRoute>,
                 loader:()=>fetch('/gameData.json'),
-                 hydrateFallbackElement:<Loading/>
+                hydrateFallbackElement:<Loading/>,
+                errorElement:<AppNotFound/>
             },
             {
                 path:'/all-apps',
@@ -53,6 +56,10 @@ export const router = createBrowserRouter([
             {
                 path:"/forgot-password",
                 Component:ForgotPassword
+            },
+            {
+                path:"/*",
+                Component:Error404
             }
         ]
     }

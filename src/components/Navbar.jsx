@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { logOutUser, user } = use(AuthContext);
+    // console.log(user?.photoURL);
     const navigate = useNavigate()
     // console.log(user)
     const handleLogout = () => {

@@ -5,7 +5,7 @@ import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 
 const Register = () => {
-    const { creatUser, updateUser, googleLogin ,setLoading} = use(AuthContext);
+    const { creatUser, updateUser, googleLogin, setLoading } = use(AuthContext);
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
     const [passError, setPassError] = useState('');
@@ -51,7 +51,7 @@ const Register = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 toast.error(errorCode)
-                 setLoading(false);
+                setLoading(false);
             });
 
     }
@@ -59,17 +59,16 @@ const Register = () => {
         googleLogin()
             .then(() => {
                 toast.success("User Created Successfully");
-                 setLoading(false);
+                setLoading(false);
                 navigate("/")
             }).catch((error) => {
                 const errorCode = error.code;
-                 toast.error(errorCode)
-                  setLoading(false);
+                toast.error(errorCode)
             });
     }
     return (
         <div className="hero min-h-screen">
-             <title>Game Hub - Register</title>
+            <title>Game Hub - Register</title>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="card bg-[#2F3645] w-full lg:min-w-96 shrink-0 shadow-2xl">
                     <div className="card-body">

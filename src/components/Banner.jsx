@@ -27,7 +27,7 @@ const Banner = ({ top_3app }) => {
         >
             {
                 top_3app.map(app => <SwiperSlide key={app.id} >
-                    <Link className='flex justify-center'><img className='h-92 lg:h-[500px]' src={app.coverPhoto} alt={app.title} /></Link>
+                    <Link to={`/app-details/${app.id}`} className='flex justify-center'><img className='h-92 lg:h-[500px]' src={app.coverPhoto} alt={app.title} /></Link>
                 </SwiperSlide>)
             }
         </Swiper>

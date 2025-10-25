@@ -40,11 +40,12 @@ const AppDetails = () => {
                                 {description}
                             </p>
                         </div>
+                         <Link to={"/all-apps"} className='btn btn-secondary text-black'>⬅ Go To All Apps</Link>
                     </div>
                 </div>
 
+           
             </div>
-
         </>
     );
 };

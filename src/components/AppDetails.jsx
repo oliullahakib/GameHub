@@ -12,6 +12,7 @@ const AppDetails = () => {
     return (
         <>
             <div className="hero min-h-screen">
+                 <title>Game Hub - {title}</title>
                 <div className="hero-content flex-col gap-8 lg:flex-row">
                     <img
                         src={coverPhoto}

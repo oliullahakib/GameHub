@@ -8,7 +8,6 @@ const Login = () => {
     const { loginUser, googleLogin } = use(AuthContext);
     const [email, setEmail] = useState('');
     const formRef = useRef();
-    console.log(email)
     const location = useLocation();
     const navigate = useNavigate();
     const [show, setShow] = useState(false)

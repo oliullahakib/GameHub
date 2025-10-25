@@ -8,7 +8,7 @@ import NewsLetter from '../components/NewsLetter';
 const Home = () => {
     const gameData = useLoaderData();
     const top_3app = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 3)
-    // console.log(top_3app)
+
     return (
         <div>
             <header >

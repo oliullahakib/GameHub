@@ -8,7 +8,6 @@ const ForgotPassword = () => {
     const location = useLocation();
     const navigate = useNavigate()
     const [email, setEmail] = useState(location.state);
-    // console.log(location,email)
     const handleForgotPassword = (e) => {
         e.preventDefault();
         setEmail(e.target.email.value);
@@ -21,7 +20,6 @@ const ForgotPassword = () => {
                 const errorCode = error.code;
                 toast.error(errorCode)
             });
-        // console.log("fogot password", email)
     }
     return (
         <div className="hero min-h-screen">

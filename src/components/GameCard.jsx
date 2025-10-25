@@ -4,7 +4,6 @@ import { Link } from 'react-router';
 import { motion } from "motion/react"
 
 const GameCard = ({app}) => {
-    // console.log(app);
     const {title,category,iconImage,ratings,coverPhoto,id} = app;
     return (
         <motion.button

@@ -5,7 +5,6 @@ import GameCard from '../components/GameCard';
 
 const AllApps = () => {
     const gameData = useLoaderData();
-    // console.log(gameData)
     return (
         <div >
             <title>Game Hub - All Apps</title>

@@ -1,11 +1,12 @@
 import React, { use, useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 
 const ForgotPassword = () => {
     const { resetPassword } = use(AuthContext);
     const location = useLocation();
+    const navigate = useNavigate()
     const [email, setEmail] = useState(location.state);
     // console.log(location,email)
     const handleForgotPassword = (e) => {
@@ -13,8 +14,8 @@ const ForgotPassword = () => {
         setEmail(e.target.email.value);
         resetPassword(email)
             .then(() => {
-                toast.info('Password reset email sent!');
                 window.open("https://mail.google.com/mail",'_blank');
+                navigate('/login')
             })
             .catch((error) => {
                 const errorCode = error.code;

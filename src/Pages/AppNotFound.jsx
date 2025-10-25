@@ -5,6 +5,7 @@ const AppNotFound = () => {
     return (
          <div className='flex justify-center items-center sm:items-start min-h-screen'>
             <div>
+                <title>Game Hub - Error</title>
                 <div className='flex justify-center'>
                     <img className='w-40 md:w-40 mb-8' src="https://icon-library.com/images/error-icon-png/error-icon-png-20.jpg" alt="" />
                 </div>

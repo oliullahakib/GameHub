@@ -5,6 +5,7 @@ const Error404 = () => {
     return (
         <div className='flex justify-center items-center sm:items-start min-h-screen'>
             <div>
+                <title>Game Hub - 404 Error</title>
                 <div className='flex justify-center'>
                     <img className='w-82 md:w-96' src="https://cdn3d.iconscout.com/3d/premium/thumb/404-error-page-3d-icon-png-download-5701571.png" alt="" />
                 </div>

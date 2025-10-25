@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const Login = () => {
     const { loginUser, googleLogin } = use(AuthContext);
     const [email, setEmail] = useState('');
+    const formRef = useRef();
     console.log(email)
     const location = useLocation();
     const navigate = useNavigate();
@@ -18,15 +19,17 @@ const Login = () => {
         loginUser(email, password)
             .then(() => {
                 toast.success("Login Successfully");
+                e.target.reset();
                 navigate(`${location?.state ? location?.state : "/"}`);
             })
             .catch((error) => {
-                if(error.code==="auth/invalid-credential"){
-                    toast.error('User Invalid')
+                if (error.code === "auth/invalid-credential") {
+                    toast.error('User Invalid!')
                 };
             });
     }
     const handleGoogleLogin = () => {
+        formRef.current.reset()
         googleLogin()
             .then(() => {
                 toast.success("Login Successfully");
@@ -43,10 +46,10 @@ const Login = () => {
                 <div className="card bg-[#2F3645] w-full md:min-w-96 shrink-0 shadow-2xl">
                     <div className="card-body">
                         <h1 className="text-6xl font-bold border-b border-base-200 pb-5 text-center oswald-font">Login Now!</h1>
-                        <form onSubmit={handleLogin} className="fieldset text-accent">
+                        <form ref={formRef} onSubmit={handleLogin} className="fieldset text-accent">
                             {/* email  */}
                             <label className="label">Email</label>
-                            <input onChange={(e)=>setEmail(e.target.value)} required name='email' type="email" className="input" placeholder="Example@gamil.com" />
+                            <input onChange={(e) => setEmail(e.target.value)} required name='email' type="email" className="input" placeholder="Example@gamil.com" />
                             {/* password  */}
                             <div className='relative'>
                                 <label className="label">Password</label>

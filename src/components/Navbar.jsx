@@ -7,6 +7,7 @@ import MyContainer from './MyContainer';
 
 const Navbar = () => {
     const { logOutUser, user } = use(AuthContext);
+    console.log(user)
     const navigate = useNavigate()
     const handleLogout = () => {
         logOutUser()
@@ -19,13 +20,13 @@ const Navbar = () => {
             })
     }
     const links = <>
-        <li> <NavLink to={"/"}>Home</NavLink></li>
-        <li> <NavLink to={"/all-apps"}>All Apps</NavLink></li>
+        <li> <NavLink className='font-semibold' to={"/"}>Home</NavLink></li>
+        <li> <NavLink className='font-semibold' to={"/all-apps"}>All Apps</NavLink></li>
         
     </>
     return (
 
-        <MyContainer className="navbar bg-[#546440b9] sticky top-0 z-10 justify-between border rounded-full px-5">
+        <MyContainer className="navbar bg-[#1D232A] sticky top-0 z-10 justify-between rounded-full px-5 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,7 +38,7 @@ const Navbar = () => {
                         {
                             links
                         }
-                         <li><button onClick={handleLogout} className="btn btn-error text-black " >Logout</button></li>
+                         
                     </ul>
                 </div>
                 <Link to={"/"} className=" cursor-pointer text-2xl oswald-font">Game<span className='text-primary font-bold'>Hub</span></Link>
@@ -53,14 +54,31 @@ const Navbar = () => {
                 <div className='flex flex-col lg:flex-row'>
                     {
                         user ?
-                            <div className='flex flex-col lg:flex-row lg:ml-5'>
-                                 <button onClick={handleLogout} className="btn btn-error text-black hidden lg:block" >Logout</button>
-                                <Link to={"/profile"}> <img referrerPolicy='no-referrer' className='border border-white rounded-full w-12 h-12 mx-3 ' src={user?.photoURL ? user?.photoURL : <FaRegUser />} alt="" /></Link>
+                            <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img
+                                    alt="user"
+                                    src={user?.photoURL} />
                             </div>
+                        </div>
+                        <ul
+                            tabIndex="-1"
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <p className='text-xl text-center'>{user?.displayName || "Name"}</p>
+                            <p className='text-gray-400 text-center'>{user?.email ||""}</p>
+                            <Link to={'/profile'} className='font-bold btn btn-primary text-black rounded-full my-5'> Profile</Link>
+                            {
+                                user&&<button onClick={handleLogout} className='font-bold  btn text-black btn-error rounded-full'>Logout</button>
+                            }
+                            
+                            
+                        </ul>
+                    </div>
                             :
                             <div className='flex flex-col lg:flex-row lg:ml-5'>
-                                <li> <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link></li>
-                                <li> <Link className="btn btn-secondary text-black" to={"/register"}>Register</Link></li>
+                                 <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link>
+                                 <Link className="btn hidden lg:flex btn-secondary text-black" to={"/register"}>Register</Link>
                             </div>
                     }
 

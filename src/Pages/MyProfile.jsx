@@ -15,7 +15,7 @@ const MyProfile = () => {
                     referrerPolicy='no-referrer'
                         className='w-40 h-40 rounded-full mt-5'
                         src={user?.photoURL}
-                        alt={user?.displayName} />
+                        alt={"user"} />
                 </figure>
                 <div className="flex flex-col items-center justify-center mt-3">
                     <h2 className="card-title">{user?.displayName}</h2>

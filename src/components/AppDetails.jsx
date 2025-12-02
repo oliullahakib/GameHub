@@ -3,17 +3,19 @@ import { FaHeart } from 'react-icons/fa';
 import { GrInstallOption } from 'react-icons/gr';
 import { IoStarSharp } from 'react-icons/io5';
 import { Link, useLoaderData, useParams } from 'react-router';
+import MyContainer from './MyContainer';
+import ReviewCard from './ReviewCard';
 
 const AppDetails = () => {
     const { id } = useParams();
     const allGames = useLoaderData();
     const singleGame = allGames.find(game => game.id === id)
 
-    const { title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings } = singleGame;
+    const { title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings,reviews } = singleGame;
     return (
         <>
-            <div className="hero min-h-screen">
-                 <title>Game Hub - App Details</title>
+            <div className="hero ">
+                <title>Game Hub - App Details</title>
                 <div className="hero-content flex-col gap-8 lg:flex-row">
                     <img
                         src={coverPhoto}
@@ -35,22 +37,30 @@ const AppDetails = () => {
                                 <p className='text-accent text-sm'>Category</p>
                             </div>
                         </div>
-                        <div>
+                        <div className='space-x-3'>
                             <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
                             <button className="btn"><FaHeart /></button>
                         </div>
-                        <div className='my-5'>
-                            <h2 className='text-xl '>Description</h2>
-                            <p className='text-accent'>
-                                {description}
-                            </p>
-                        </div>
-                         <Link to={"/all-apps"} className='btn btn-secondary text-black'>⬅ Go To All Apps</Link>
+
+                        <Link to={"/all-apps"} className='btn btn-secondary mt-5 text-black'>⬅ Go To All Apps</Link>
                     </div>
                 </div>
 
-           
+
             </div>
+            <MyContainer className='my-5 px-5'>
+                <h2 className='text-xl text-primary'>Description:</h2>
+                <p className='text-accent'>
+                    {description}
+                </p>
+            </MyContainer>
+
+            <MyContainer className='my-5 px-5'>
+                <h2 className='text-xl text-primary'>Reviews({reviews.length})</h2>
+                <div className='grid gap-5 my-5'>
+                    {reviews.map(review=><ReviewCard review={review} />)}
+                </div>
+            </MyContainer>
         </>
     );
 };

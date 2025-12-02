@@ -9,20 +9,22 @@ const GameCard = ({app}) => {
         <motion.button
         whileHover={{ scale: .9 }} 
         >
-        <Link  to={`/app-details/${id}`} className="card cursor-pointer bg-[#222831] border-b-2 border-primary">
+        <Link  to={`/app-details/${id}`} className="card cursor-pointer bg-[#222831] border-b-2 border-primary pl-3">
             <figure>
                 <img
-                className='h-80 w-full object-cover'
+                className='h-80 hidden md:inline w-full object-cover'
                     src={coverPhoto}
                     alt="Shoes" />
             </figure>
-            <div className="flex gap-5 my-5 px-1">
-                <img className='w-20 rounded-md sm:rounded-2xl' src={iconImage} alt={title} />
+            <div className="flex flex-col  gap-5 my-5 px-1">
+              <div className=''>
+                  <img className='w-20 h-20 md:h-20 md:w-20 rounded-md ' src={iconImage} alt={'icon'} />
+              </div>
                 <div>
-                    <h2 className="card-title text-sm sm:text-lg">
+                    <h2 className="card-title text-sm sm:text-lg min-h-10">
                        {title}
                     </h2>
-                    <div>
+                    <div className='min-h-5'>
                         <div className="text-accent flex ">{category}</div>
                     </div>
                     <p className='flex items-center'>{ratings} <span><IoStarSharp /></span></p>

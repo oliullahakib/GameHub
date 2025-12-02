@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:"/app-details/:id",
-                element:<PrivateRoute><AppDetails/></PrivateRoute>,
+                element:<AppDetails/>,
                 loader:()=>fetch('/gameData.json'),
                 hydrateFallbackElement:<Loading/>,
                 errorElement:<AppNotFound/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaHeart } from 'react-icons/fa';
 import { GrInstallOption } from 'react-icons/gr';
 import { IoStarSharp } from 'react-icons/io5';
 import { Link, useLoaderData, useParams } from 'react-router';
@@ -34,7 +35,10 @@ const AppDetails = () => {
                                 <p className='text-accent text-sm'>Category</p>
                             </div>
                         </div>
-                        <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
+                        <div>
+                            <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
+                            <button className="btn"><FaHeart /></button>
+                        </div>
                         <div className='my-5'>
                             <h2 className='text-xl '>Description</h2>
                             <p className='text-accent'>

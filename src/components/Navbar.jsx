@@ -22,7 +22,12 @@ const Navbar = () => {
     const links = <>
         <li> <NavLink className='font-semibold' to={"/"}>Home</NavLink></li>
         <li> <NavLink className='font-semibold' to={"/all-apps"}>All Apps</NavLink></li>
-        
+        <li> <NavLink className='font-semibold' to={"/about-us"}>About us</NavLink></li>
+        {
+            user && <li> <NavLink className='font-semibold' to={"/wish-list"}>Whish List</NavLink></li>
+
+        }
+
     </>
     return (
 
@@ -38,7 +43,7 @@ const Navbar = () => {
                         {
                             links
                         }
-                         
+
                     </ul>
                 </div>
                 <Link to={"/"} className=" cursor-pointer text-2xl oswald-font">Game<span className='text-primary font-bold'>Hub</span></Link>
@@ -55,30 +60,30 @@ const Navbar = () => {
                     {
                         user ?
                             <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
-                                    alt="user"
-                                    src={user?.photoURL} />
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img
+                                            alt="user"
+                                            src={user?.photoURL} />
+                                    </div>
+                                </div>
+                                <ul
+                                    tabIndex="-1"
+                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                                    <p className='text-xl text-center'>{user?.displayName || "Name"}</p>
+                                    <p className='text-gray-400 text-center'>{user?.email || ""}</p>
+                                    <Link to={'/profile'} className='font-bold btn btn-primary text-black rounded-full my-5'> Profile</Link>
+                                    {
+                                        user && <button onClick={handleLogout} className='font-bold  btn text-black btn-error rounded-full'>Logout</button>
+                                    }
+
+
+                                </ul>
                             </div>
-                        </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <p className='text-xl text-center'>{user?.displayName || "Name"}</p>
-                            <p className='text-gray-400 text-center'>{user?.email ||""}</p>
-                            <Link to={'/profile'} className='font-bold btn btn-primary text-black rounded-full my-5'> Profile</Link>
-                            {
-                                user&&<button onClick={handleLogout} className='font-bold  btn text-black btn-error rounded-full'>Logout</button>
-                            }
-                            
-                            
-                        </ul>
-                    </div>
                             :
                             <div className='flex flex-col lg:flex-row lg:ml-5'>
-                                 <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link>
-                                 <Link className="btn hidden lg:flex btn-secondary text-black" to={"/register"}>Register</Link>
+                                <Link className="btn btn-primary text-black my-3 lg:my-0 lg:mx-3" to={"/login"}>Login</Link>
+                                <Link className="btn hidden lg:flex btn-secondary text-black" to={"/register"}>Register</Link>
                             </div>
                     }
 

@@ -39,7 +39,7 @@ const AppDetails = () => {
                         </div>
                         <div className='space-x-3'>
                             <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
-                            <button className="btn"><FaHeart /></button>
+                            <button className="btn btn-warning text-black">WishList <FaHeart color='red' /></button>
                         </div>
 
                         <Link to={"/all-apps"} className='btn btn-secondary mt-5 text-black'>⬅ Go To All Apps</Link>

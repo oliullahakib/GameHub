@@ -12,6 +12,7 @@ const MyProfile = () => {
             <div className="card bg-[#08839520] min-w-82 lg:min-w-96 shadow-sm">
                 <figure>
                     <img
+                    referrerPolicy='no-referrer'
                         className='w-40 h-40 rounded-full mt-5'
                         src={user?.photoURL}
                         alt={user?.displayName} />

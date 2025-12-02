@@ -55,7 +55,7 @@ const Navbar = () => {
                         user ?
                             <div className='flex flex-col lg:flex-row lg:ml-5'>
                                  <button onClick={handleLogout} className="btn btn-error text-black hidden lg:block" >Logout</button>
-                                <Link to={"/profile"}> <img className='border border-white rounded-full w-12 h-12 mx-3 ' src={user?.photoURL ? user?.photoURL : <FaRegUser />} alt="" /></Link>
+                                <Link to={"/profile"}> <img referrerPolicy='no-referrer' className='border border-white rounded-full w-12 h-12 mx-3 ' src={user?.photoURL ? user?.photoURL : <FaRegUser />} alt="" /></Link>
                             </div>
                             :
                             <div className='flex flex-col lg:flex-row lg:ml-5'>

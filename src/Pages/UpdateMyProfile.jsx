@@ -28,11 +28,11 @@ const UpdateMyProfile = () => {
                 <form onSubmit={handleUpdateUser} className='flex flex-col' >
                     {/* Name  */}
                     <label className="label">Name</label>
-                    <input required name='name' type="text" className="input w-full" placeholder="Name" />
+                    <input required defaultValue={user.displayName} name='name' type="text" className="input w-full" placeholder="Name" />
                     <p className='text-red-400'>{ }</p>
                     {/* Photo URL  */}
                     <label className="label"> Photo URL </label>
-                    <input required name='photo' type="text" className="input w-full" placeholder=" Photo URL " />
+                    <input required defaultValue={user.photoURL} name='photo' type="text" className="input w-full" placeholder=" Photo URL " />
                     <div className='w-full flex justify-center'>
                         <button className="btn btn-warning lg:w-2/3 border-none shadow-none my-5 ">Update Information <GrUpdate /> </button>
                     </div>

@@ -12,6 +12,7 @@ import Loading from "../Pages/Loading";
 import ForgotPassword from "../Pages/ForgotPassword";
 import Error404 from "../Pages/Error404";
 import AppNotFound from "../Pages/AppNotFound";
+import AboutUs from "../Pages/AboutUs";
 
 export const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
             {
                 path:"/profile",
                 Component:MyProfile
+            },
+            {
+                path:"/about-us",
+                Component:AboutUs
             },
             {
                 path:"/profile/update-profile",

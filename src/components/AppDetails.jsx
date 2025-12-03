@@ -11,23 +11,26 @@ import { toast } from 'react-toastify';
 
 const AppDetails = () => {
     const { id } = useParams();
+   
     const { user } = use(AuthContext);
     const axiosSecure = useAxiosSecure()
     const navigate = useNavigate()
     const allGames = useLoaderData();
     const singleGame = allGames.find(game => game._id === id)
 
-    const { title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings, reviews } = singleGame;
+    const {_id, title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings, reviews } = singleGame;
     const handleWishList = () => {
+       
         if (!user) return navigate('/login')
-            console.log(user)
             const email = user.email || user.displayName
-            const newGame = {...singleGame,email}
+            const newGame = {gameId:_id, title, category, iconImage, developer, downloadLink, ratings, reviews,email }
         axiosSecure.post('/wish-game', newGame)
             .then(res => {
-                console.log(res.data)
                 if (res.data.insertedId) {
                     toast.success(`${title} added to Wish List`)
+                }
+                if(res.data.message){
+                    toast.error(res.data.message)
                 }
             })
             .catch(err=>{
@@ -61,7 +64,7 @@ const AppDetails = () => {
                         </div>
                         <div className='space-x-3'>
                             <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
-                            <button onClick={() => handleWishList()} className="btn btn-warning text-black">WishList <FaHeart color='red' /></button>
+                            <button  onClick={() => handleWishList()} className="btn btn-warning text-black">WishList <FaHeart color='red' /></button>
                         </div>
 
                         <Link to={"/all-apps"} className='btn btn-secondary mt-5 text-black'>⬅ Go To All Apps</Link>

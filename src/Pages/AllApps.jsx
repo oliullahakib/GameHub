@@ -12,7 +12,7 @@ const AllApps = () => {
            <h2 className='text-xl font-semibold my-8 pl-5'>All Games <span className='text-primary font-bold'>({gameData.length})</span> </h2>
            <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 px-3 mb-8'>
             {
-                gameData.map(app=><GameCard key={app.id} app={app}/>)
+                gameData.map(app=><GameCard key={app._id} app={app}/>)
             }
            </div>
         </MyContainer>

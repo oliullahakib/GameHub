@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { use } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { GrInstallOption } from 'react-icons/gr';
 import { IoStarSharp } from 'react-icons/io5';
-import { Link, useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useNavigate, useParams } from 'react-router';
 import MyContainer from './MyContainer';
 import ReviewCard from './ReviewCard';
+import { AuthContext } from '../Context/AuthContext';
+import useAxiosSecure from '../hook/useAxiosSecure';
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
     const { id } = useParams();
+    const { user } = use(AuthContext);
+    const axiosSecure = useAxiosSecure()
+    const navigate = useNavigate()
     const allGames = useLoaderData();
-    const singleGame = allGames.find(game => game.id === id)
+    const singleGame = allGames.find(game => game._id === id)
 
-    const { title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings,reviews } = singleGame;
+    const { title, category, coverPhoto, description, developer, downloadLink, iconImage, ratings, reviews } = singleGame;
+    const handleWishList = () => {
+        if (!user) return navigate('/login')
+            console.log(user)
+            const email = user.email || user.displayName
+            const newGame = {...singleGame,email}
+        axiosSecure.post('/wish-game', newGame)
+            .then(res => {
+                console.log(res.data)
+                if (res.data.insertedId) {
+                    toast.success(`${title} added to Wish List`)
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+    }
     return (
         <>
             <div className="hero ">
@@ -39,7 +61,7 @@ const AppDetails = () => {
                         </div>
                         <div className='space-x-3'>
                             <Link to={downloadLink} className="btn px-5 btn-primary text-black">Install <GrInstallOption /></Link>
-                            <button className="btn btn-warning text-black">WishList <FaHeart color='red' /></button>
+                            <button onClick={() => handleWishList()} className="btn btn-warning text-black">WishList <FaHeart color='red' /></button>
                         </div>
 
                         <Link to={"/all-apps"} className='btn btn-secondary mt-5 text-black'>⬅ Go To All Apps</Link>
@@ -58,7 +80,7 @@ const AppDetails = () => {
             <MyContainer className='my-5 px-5'>
                 <h2 className='text-xl text-primary'>Reviews({reviews.length})</h2>
                 <div className='grid gap-5 my-5'>
-                    {reviews.map(review=><ReviewCard review={review} />)}
+                    {reviews.map((review, i) => <ReviewCard key={i} review={review} />)}
                 </div>
             </MyContainer>
         </>

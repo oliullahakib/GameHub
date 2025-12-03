@@ -4,12 +4,12 @@ import { Link } from 'react-router';
 import { motion } from "motion/react"
 
 const GameCard = ({app}) => {
-    const {title,category,iconImage,ratings,coverPhoto,id} = app;
+    const {title,category,iconImage,ratings,coverPhoto,_id} = app;
     return (
         <motion.button
         whileHover={{ scale: .9 }} 
         >
-        <Link  to={`/app-details/${id}`} className="card cursor-pointer bg-[#222831] border-b-2 border-primary pl-3">
+        <Link  to={`/app-details/${_id}`} className="card cursor-pointer bg-[#222831] border-b-2 border-primary pl-3">
             <figure>
                 <img
                 className='h-80 hidden md:inline w-full object-cover'

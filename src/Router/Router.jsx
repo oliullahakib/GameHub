@@ -23,20 +23,20 @@ export const router = createBrowserRouter([
             {
                 index:true,
                 Component:Home,
-                loader:()=>fetch('/gameData.json'),
+                loader:()=>fetch('http://localhost:3000/games'),
                 hydrateFallbackElement:<Loading/>
             },
             {
                 path:"/app-details/:id",
                 element:<AppDetails/>,
-                loader:()=>fetch('/gameData.json'),
+                loader:()=>fetch('http://localhost:3000/games'),
                 hydrateFallbackElement:<Loading/>,
                 errorElement:<AppNotFound/>
             },
             {
                 path:'/all-apps',
                 Component:AllApps,
-                 loader:()=>fetch('/gameData.json'),
+                 loader:()=>fetch('http://localhost:3000/games'),
                  hydrateFallbackElement:<Loading/>
             },
             {

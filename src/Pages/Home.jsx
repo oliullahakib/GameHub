@@ -8,7 +8,7 @@ import NewsLetter from '../components/NewsLetter';
 import Marquee from "react-fast-marquee"
 const Home = () => {
     const gameData = useLoaderData();
-    const top_3app = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 3)
+    const top_3app = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 4)
 
     return (
         <div>
@@ -19,7 +19,7 @@ const Home = () => {
                 <section className='popular-games '>
                     <MyContainer className=' my-10 relative px-3 lg:px-0'>
                         <h2 className='text-xl font-semibold my-5 pl-5'>Popular Games</h2>
-                        <div className="card-container grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <div className="card-container grid grid-cols-1 lg:grid-cols-4 gap-4">
                             {
                                 top_3app.map(app => <GameCard key={app.id} app={app} />)
                             }

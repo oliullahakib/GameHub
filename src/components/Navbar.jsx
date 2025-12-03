@@ -7,7 +7,6 @@ import MyContainer from './MyContainer';
 
 const Navbar = () => {
     const { logOutUser, user } = use(AuthContext);
-    console.log(user)
     const navigate = useNavigate()
     const handleLogout = () => {
         logOutUser()

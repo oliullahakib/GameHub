@@ -4,6 +4,7 @@ import { AuthContext } from '../Context/AuthContext';
 import useAxiosSecure from '../hook/useAxiosSecure';
 import MyContainer from '../components/MyContainer';
 import WishGameCard from '../components/WishGameCard';
+import { Link } from 'react-router';
 
 const WishList = () => {
     const{user}=use(AuthContext)
@@ -21,7 +22,13 @@ const WishList = () => {
              <h2 className='text-xl font-semibold my-5 pl-5'>WishList <span className='text-primary'>({games.length})</span></h2>
               <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 px-3 mb-8'>
             {
-                games.map(app=><WishGameCard refetch={refetch} key={app._id} app={app}/>)
+             games.length===0?<div className='col-span-2 lg:col-span-4'>
+              <div className='flex flex-col justify-center items-center gap-5'>
+                  <h1 className='text-center text-accent text-3xl md:text-4xl font-bold'>Na Data Available!</h1>
+                <Link to={'/all-apps'} className='btn btn-primary text-black'>Go to All App</Link>
+              </div>
+             </div>
+             : games.map(app=><WishGameCard refetch={refetch} key={app._id} app={app}/>)
             }
            </div>
         </MyContainer>

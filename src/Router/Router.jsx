@@ -13,6 +13,7 @@ import ForgotPassword from "../Pages/ForgotPassword";
 import Error404 from "../Pages/Error404";
 import AppNotFound from "../Pages/AppNotFound";
 import AboutUs from "../Pages/AboutUs";
+import WishList from "../Pages/WishList";
 
 export const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
             {
                 path:"/about-us",
                 Component:AboutUs
+            },
+            {
+                path:"/wish-list",
+                Component:WishList
             },
             {
                 path:"/profile/update-profile",

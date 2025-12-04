@@ -6,6 +6,7 @@ import MyContainer from '../components/MyContainer';
 import { FaArrowRight } from 'react-icons/fa';
 import NewsLetter from '../components/NewsLetter';
 import Marquee from "react-fast-marquee"
+import GameEvent from '../components/GameEvent';
 const Home = () => {
     const gameData = useLoaderData();
     const top_3app = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 4)
@@ -43,6 +44,12 @@ const Home = () => {
                             <img className='w-40 mx-10' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkL1Tx1Z9HZYiN4hrINU2pprpFu34MHyZQnA&s" alt="" />
                             
                         </Marquee>
+                    </MyContainer>
+                </section>
+                
+                <section>
+                    <MyContainer>
+                        <GameEvent/>
                     </MyContainer>
                 </section>
 

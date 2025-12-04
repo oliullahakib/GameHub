@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 
 const ReviewCard = ({review}) => {
     return (
-        <div className="card card-border bg-base-100 ">
+        <div className="card  bg-base-100 ">
   <div className="card-body">
     <h2 className="card-title">{review.username}</h2>
     <p className='flex items-center gap-1'><FaStar/> {review.rating}</p>

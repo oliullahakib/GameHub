@@ -1,12 +1,13 @@
 [
   {
+  
     "title": "Call of Duty: Mobile",
     "iconImage": "https://play-lh.googleusercontent.com/Gs0Dhk2VSUFn25alS7iia6BTQO_B8sv_CYTH4UpdpcYnD2Jf3BPS-6ESSPL3u6RJsH4=s96-rw",
     "coverPhoto": "https://cdn.mos.cms.futurecdn.net/ycuWtgZ9xLDcCsNk3q6J2c.jpg",
     "category": "FPS",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&rdid=com.activision.callofduty.shooter&feature=md&offerId",
-    "description": "Call of Duty: Mobile brings a full-fledged first-person shooter experience...",
-    "ratings": 4.3,
+    "description": "Call of Duty: Mobile brings a full-fledged first-person shooter experience to handheld devices with polished visuals, smooth controls, and a wide mix of gameplay modes. Players can enjoy classic multiplayer battles in iconic COD maps like Nuketown, Hijacked, and Firing Range, each recreated with great detail. The 100-player Battle Royale mode offers large-scale survival action with vehicles, diverse terrains, and customizable loadouts. Weapon upgrades, scorestreaks, operator skills, and seasonal rewards keep the progression system engaging. With ranked modes, clans, social features, and frequent limited-time events, there’s always something new to play. The game also receives constant updates that introduce fresh content such as characters, weapons, and themed events inspired by mainline COD titles. Whether you enjoy fast-paced run-and-gun gameplay or tactical strategy, COD Mobile delivers an immersive and competitive FPS experience on the go.",
+    "ratings": "4.3",
     "developer": "Activision Publishing, Inc.",
     "reviews": [
       { "username": "AceShooter", "rating": 5, "comment": "Amazing graphics and smooth gameplay!" },
@@ -15,13 +16,14 @@
     ]
   },
   {
+  
     "title": "Pokémon GO",
     "iconImage": "https://play-lh.googleusercontent.com/cKbYQSRgvec6n2oMJLVRWqHS8BsH9AxBp-cFGrGqve3CpE4EmI3Ofej1RCUciQbqhebCfiDIomUQINqzIL4I7kk=s96-rw",
     "coverPhoto": "https://lh3.googleusercontent.com/u0VmmFxdNgE75u4ES6mxNQKiS5v-flZ0D9e3oSeVQd8wLupTKGS3XCRkym7t2hLwnxEHJj_mFHK2Opze0EBmS6bWdnJ8Q5KRdH8=s0-e365",
     "category": "Adventure",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&rdid=com.nianticlabs.pokemongo&feature=md&offerId",
-    "description": "Pokémon GO brings the Pokémon world into real life...",
-    "ratings": 3.9,
+    "description": "Pokémon GO brings the Pokémon world into real life through augmented reality and GPS-based exploration. Players walk around their surroundings to discover Pokémon, spin PokéStops, and battle at Gyms placed at real-world landmarks. Raids allow teams of players to battle powerful boss Pokémon, while PvP battles offer a competitive element for trainers looking to test their skills. Special Research tasks and limited-time events introduce themed rewards and rare Pokémon. With Buddy Pokémon, egg-hatching, item crafting, and constant seasonal updates, the game encourages exploration and activity. New Pokémon generations continue to expand the gameplay and Pokédex, while social features like friend lists and trading strengthen community interaction. Pokémon GO remains one of the most unique mobile adventures, blending outdoor exploration with strategy and collection.",
+    "ratings": "3.9",
     "developer": "Niantic, Inc.",
     "reviews": [
       { "username": "TrainerLiam", "rating": 5, "comment": "Great motivation to stay active!" },
@@ -30,13 +32,14 @@
     ]
   },
   {
+   
     "title": "Clash Royale",
     "iconImage": "https://play-lh.googleusercontent.com/gnSC6s8-6Tjc4uhvDW7nfrSJxpbhllzYhgX8y374N1LYvWBStn2YhozS9XXaz1T_Pi2q=s96-rw",
     "coverPhoto": "https://play-lh.googleusercontent.com/ve38p_0sUn23Be3ou6p1BLJXuhrADDN97V7hTr_7Hdvj5-LyMusyaRHqn_oEMHqClKo=w1052-h592-rw",
     "category": "Strategy",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.supercell.clashroyale&rdid=com.supercell.clashroyale&feature=md&offerId",
-    "description": "Clash Royale is a competitive real-time strategy game...",
-    "ratings": 4.4,
+    "description": "Clash Royale is a competitive real-time strategy game in which players deploy troops, buildings, and spells using collectible cards. The goal is to destroy the opponent’s towers in fast-paced matches that last just a few minutes. Each card has unique stats, strengths, and elixir costs, making deck-building an important part of strategy. As players progress through arenas, they unlock new cards and earn rewards from chests, quests, and seasonal passes. Clan features enable players to donate cards, share strategies, and participate in Clan Wars. Regular updates bring balance changes, new cards, modes, and themed challenges. With its blend of tactical gameplay, charming design, and competitive ranked ladder, Clash Royale remains a top mobile strategy title for both casual and hardcore players.",
+    "ratings": "4.4",
     "developer": "Supercell",
     "reviews": [
       { "username": "DeckMaster", "rating": 5, "comment": "Deep strategy and fun battles!" },
@@ -45,13 +48,14 @@
     ]
   },
   {
+ 
     "title": "Temple Run 2",
     "iconImage": "https://play-lh.googleusercontent.com/go4XqS4mYs-G2tZymiVLF4wJYXIi5QrvwixNRzssk4G_vRBHrAdg4E1ddNwy9c2cZA=s96-rw",
     "coverPhoto": "https://cdn.aptoide.com/imgs/7/4/8/748a24b37754e55d3a08829d0056ce68_fgraphic.png",
     "category": "Arcade",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.imangi.templerun2&rdid=com.imangi.templerun2&feature=md&offerId",
-    "description": "Temple Run 2 evolves the endless-running formula...",
-    "ratings": 4.5,
+    "description": "Temple Run 2 evolves the endless-running formula with richer environments, faster gameplay, and smoother controls. Players sprint through cliffs, forests, mines, and zip lines while avoiding obstacles, collecting coins, and using power-ups to extend their run. Each environment has distinct visuals and unique hazards that keep gameplay engaging. Characters can be upgraded with abilities, and daily challenges offer extra rewards. The game’s simple swipe-based mechanics, vibrant visuals, and satisfying progression system make it enjoyable for players of all ages. Frequent updates introduce themed events, new characters, and limited-time treasures, adding variety to the classic running experience.",
+    "ratings": "4.5",
     "developer": "Imangi Studios",
     "reviews": [
       { "username": "RunnerPro", "rating": 5, "comment": "Smooth, fun, and addictive!" },
@@ -60,13 +64,14 @@
     ]
   },
   {
+  
     "title": "Honkai: Star Rail",
     "iconImage": "https://play-lh.googleusercontent.com/IqXUfiwbK-NCu5KyyK9P3po1kd4ZPOC4QJVWRk2ooJXnUcSpkCUQRYYJ-9vZkCEnPOxDIEWjNpS30OwHNZTtCKw=s96-rw",
     "coverPhoto": "https://play-lh.googleusercontent.com/D0nHhYFtmtplNVIzWV3bfGdtgnLQS19VuehbNgJnpPeF8GKEu0BEkiBTVotspyARMfUJ_92nLtSCeK5vQ4NKXA=w1052-h592-rw",
     "category": "Turn-Based RPG",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.HoYoverse.hkrpgoversea&rdid=com.HoYoverse.hkrpgoversea&feature=md&offerId",
-    "description": "Honkai: Star Rail is a story-rich turn-based RPG...",
-    "ratings": 4.7,
+    "description": "Honkai: Star Rail is a story-rich turn-based RPG set in a vast sci-fi universe full of mysterious worlds, powerful enemies, and memorable characters. Players board the Astral Express and explore different planets, each featuring unique cultures, environments, and challenges. Combat is strategic and visually stunning, with elemental synergies, character abilities, and timing-based mechanics. The game's narrative blends humor, drama, and cosmic mystery with strong character development and cinematic cutscenes. Exploration offers puzzles, side quests, and rewards that deepen immersion. Frequent updates add new characters, story chapters, limited-time events, and quality-of-life improvements. With its high production quality, engaging combat, and expansive lore, Honkai: Star Rail stands out as one of the best turn-based RPG experiences on mobile.",
+    "ratings": "4.7",
     "developer": "HoYoverse",
     "reviews": [
       { "username": "TrailblazerX", "rating": 5, "comment": "Amazing visuals and story!" },
@@ -75,13 +80,14 @@
     ]
   },
   {
+    
     "title": "8 Ball Pool",
     "iconImage": "https://play-lh.googleusercontent.com/DH1w4WLWvlV8BlbfQCsEs9T3JXWJr9zcPLZuh_L9WMfBn1plW6r5Bdhl43L1OAkjwAA=s96-rw",
     "coverPhoto": "https://m.media-amazon.com/images/I/9166C52KbmL.png",
     "category": "Sports",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.miniclip.eightballpool&rdid=com.miniclip.eightballpool&feature=md&offerId",
-    "description": "8 Ball Pool is one of the most popular pool games...",
-    "ratings": 4.4,
+    "description": "8 Ball Pool is one of the most popular pool games on mobile, offering simple controls, realistic ball physics, and competitive multiplayer modes. Players can participate in 1v1 matches, tournaments, and special themed events. Winning matches earns coins, cues, and exclusive items that enhance gameplay and customization. The ranking system allows players to progress through different tiers, challenging stronger opponents and unlocking high-stakes tables. Friends can play together instantly, while practice mode helps sharpen skills. Updates frequently introduce new cues, events, and seasonal rewards. Whether you're a casual player or a pool enthusiast, 8 Ball Pool delivers a polished and engaging online billiards experience.",
+    "ratings": "4.4",
     "developer": "Miniclip",
     "reviews": [
       { "username": "PoolLegend", "rating": 5, "comment": "Very fun and competitive!" },
@@ -90,13 +96,14 @@
     ]
   },
   {
+   
     "title": "Gardenscapes",
     "iconImage": "https://play-lh.googleusercontent.com/SffnlIy-_lnakKGEko_-Y8qdOpPen3on0kAI_cs_HOLpB8jKz5lh0rUR7MAt1mv6ow=s96-rw",
     "coverPhoto": "https://images.ctfassets.net/vfkpgemp7ek3/2926812270/ded1bb7485fbc44927ede57cb92315af/gardenscapes-lifetime-revenue-one-half-billion.jpg",
     "category": "Puzzle",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.playrix.gardenscapes&rdid=com.playrix.gardenscapes&feature=md&offerId",
-    "description": "Gardenscapes blends match-3 puzzle gameplay with a charming storyline...",
-    "ratings": 4.4,
+    "description": "Gardenscapes blends match-3 puzzle gameplay with a charming renovation storyline. Players help Austin the Butler restore a beautiful garden by completing levels, earning stars, and unlocking new decorations. Each area of the garden has unique characters, challenges, and visual designs that gradually transform as you progress. The match-3 puzzles introduce power-ups, obstacles, and special pieces that add variety and strategy. Daily tasks, special events, and seasonal updates bring fresh content and limited-time rewards. The relaxing music, colorful visuals, and wholesome story make Gardenscapes enjoyable for players seeking a casual yet engaging experience.",
+    "ratings": "4.4",
     "developer": "Playrix",
     "reviews": [
       { "username": "PuzzleLover", "rating": 5, "comment": "Relaxing and fun to play!" },
@@ -105,13 +112,14 @@
     ]
   },
   {
+   
     "title": "Asphalt 9: Legends",
     "iconImage": "https://play-lh.googleusercontent.com/C1O15FL45-ma-rfTgnWgIp_5reJDb3NX7Bk4T-Q8amjBYu_REDO-DQ6JSKIfWOa57u8=s96-rw",
     "coverPhoto": "https://play-lh.googleusercontent.com/BJ-Lb_kL7F_RcKl2F1p9m3CdXryDgUQHd5C0dg8H7D0_nxoMpN702UrOX8GLhx-FC-lxT7FZ7L5f4ySLoxy2=w1052-h592-rw",
     "category": "Racing",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftA9HM&rdid=com.gameloft.android.ANMP.GloftA9HM&feature=md&offerId",
-    "description": "Asphalt 9: Legends is a high-speed arcade racing game...",
-    "ratings": 4.4,
+    "description": "Asphalt 9: Legends is a high-speed arcade racing game known for its stunning visuals, licensed sports cars, and action-packed gameplay. Players race across detailed global tracks while performing dramatic stunts using Nitro, barrel rolls, and drifting boosts. The TouchDrive control option simplifies steering for beginners, while manual controls offer precision for advanced players. Career mode, multiplayer races, and special limited-time events add depth and replayability. Cars can be upgraded, customized, and unlocked through blueprints earned in races and missions. Frequent updates introduce new cars, maps, and seasonal challenges, keeping the game exciting for long-term play.",
+    "ratings": "4.4",
     "developer": "Gameloft",
     "reviews": [
       { "username": "NitroRacer", "rating": 5, "comment": "Best graphics in a mobile racing game!" },
@@ -120,13 +128,14 @@
     ]
   },
   {
+   
     "title": "Ludo King",
     "iconImage": "https://play-lh.googleusercontent.com/AwrQb4bJk-34pw_ye7VhjDN0Azraz_pYYq9s5FbcapiF7qfxbYYvqWl-TjIF9xJIeA=s96-rw",
     "coverPhoto": "https://play-lh.googleusercontent.com/ZkG7EBFDacH-PYChraz3f7SMqdf-jWLK_i2NhtjVGFR5R5Yc5bPmVJndyRNyFUn9RJU=w526-h296-rw",
     "category": "Board",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.ludo.king&rdid=com.ludo.king&feature=md&offerId",
-    "description": "Ludo King brings the classic board game to mobile...",
-    "ratings": 4.2,
+    "description": "Ludo King brings the classic board game to mobile with online multiplayer, offline modes, and customizable themes. Players roll dice and move tokens around the board as they race to reach home before opponents. The game supports local multiplayer, online matches, and private rooms with friends. Additional modes like Quick Ludo, 6-Player mode, and voice chat enhance the experience. Frequent updates add new boards, events, and cosmetic themes. Ludo King’s simple rules and social gameplay make it enjoyable for families and friends looking for classic fun.",
+    "ratings": "4.2",
     "developer": "Gametion Technologies Pvt Ltd",
     "reviews": [
       { "username": "DiceMaster", "rating": 5, "comment": "Great game to play with friends!" },
@@ -135,13 +144,14 @@
     ]
   },
   {
+
     "title": "PUBG MOBILE",
     "iconImage": "https://play-lh.googleusercontent.com/zCSGnBtZk0Lmp1BAbyaZfLktDzHmC6oke67qzz3G1lBegAF2asyt5KzXOJ2PVdHDYkU=s96-rw",
     "coverPhoto": "https://play-lh.googleusercontent.com/EgZ6v0EAothJJX6dcnzJ7dIosXmZhlIpUCUIJMyIhbxw0AOYiUangj1LcyU7Vt3tCfiQtCKmlY-pnTW3yO4krA=w1052-h592-rw",
     "category": "Action",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.tencent.ig&rdid=com.tencent.ig&feature=md&offerId",
-    "description": "PUBG MOBILE delivers intense Battle Royale gameplay...",
-    "ratings": 4.3,
+    "description": "PUBG MOBILE delivers intense Battle Royale gameplay where 100 players fight for survival on large, detailed maps. Players parachute in, loot weapons and gear, and battle enemies in a shrinking safe zone. The game features multiple maps, each offering diverse terrains and tactical possibilities. Modes include Classic BR, Team Deathmatch, Arena Training, and limited-time events. Weapons, vehicles, and throwable items allow varied playstyles. Frequent updates bring new mechanics, collaborations, skins, and seasonal rewards. Sound design, realistic weapon behavior, and strong team coordination make PUBG Mobile one of the most immersive BR experiences available.",
+    "ratings": "4.3",
     "developer": "Level Infinite",
     "reviews": [
       { "username": "LastSurvivor", "rating": 5, "comment": "Best battle royale on mobile!" },
@@ -150,13 +160,14 @@
     ]
   },
   {
+   
     "title": "Free Fire",
     "iconImage": "https://play-lh.googleusercontent.com/Ozmaqzz_vAlsyvGO-Sv6MYhZGzh_uWqXcNg3GXV6Qsvlz-sEAyO6RATTWhgvcGO7jgu1cQV7H5RWVsgZvbqX=s96-rw",
     "coverPhoto": "https://play-lh.googleusercontent.com/lC6KlHUFjerfg5uMJosB8dLQN2FZWx1yTK8D5tqpCFPw3UpMwkAa2Pp0EiH9qJWiQdtbyZJjYiswlJERPtXKjw=w1052-h592-rw",
     "category": "Action",
     "downloadLink": "https://play.google.com/store/apps/details?id=com.dts.freefireth&rdid=com.dts.freefireth&feature=md&offerId",
-    "description": "Free Fire offers fast-paced Battle Royale gameplay...",
-    "ratings": 4.2,
+    "description": "Free Fire offers fast-paced Battle Royale gameplay designed for shorter, intense matches. Each match lasts about 10 minutes and features 50 players battling on a compact island filled with weapons, vehicles, and strategic locations. The character system introduces unique abilities that allow players to customize their playstyle. Regular events, themed seasons, and collaboration updates keep the game fresh with new skins, modes, and rewards. The simple controls, smooth performance on low-end devices, and quick matchmaking make Free Fire highly accessible for all players. Its fast action and strategic depth keep matches engaging and competitive.",
+    "ratings": "4.2",
     "developer": "Garena International I",
     "reviews": [
       { "username": "FireHunter", "rating": 5, "comment": "Fast matches and great gameplay!" },

@@ -22,7 +22,7 @@ const Home = () => {
                         <h2 className='text-xl font-semibold my-5 pl-5'>Popular Games</h2>
                         <div className="card-container grid grid-cols-1 lg:grid-cols-4 gap-4">
                             {
-                                top_3app.map(app => <GameCard key={app.id} app={app} />)
+                                top_3app.map(app => <GameCard key={app._id} app={app} />)
                             }
                         </div>
                         <div className='flex justify-center'>

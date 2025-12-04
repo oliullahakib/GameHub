@@ -23,20 +23,20 @@ export const router = createBrowserRouter([
             {
                 index:true,
                 Component:Home,
-                loader:()=>fetch('http://localhost:3000/games'),
+                loader:()=>fetch('https://game-hub-server-beta.vercel.app/games'),
                 hydrateFallbackElement:<Loading/>
             },
             {
                 path:"/app-details/:id",
                 element:<AppDetails/>,
-                loader:()=>fetch('http://localhost:3000/games'),
+                loader:()=>fetch('https://game-hub-server-beta.vercel.app/games'),
                 hydrateFallbackElement:<Loading/>,
                 errorElement:<AppNotFound/>
             },
             {
                 path:'/all-apps',
                 Component:AllApps,
-                 loader:()=>fetch('http://localhost:3000/games'),
+                 loader:()=>fetch('https://game-hub-server-beta.vercel.app/games'),
                  hydrateFallbackElement:<Loading/>
             },
             {

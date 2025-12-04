@@ -20,7 +20,7 @@ const Home = () => {
                 <section className='popular-games '>
                     <MyContainer className=' my-10 relative px-3 lg:px-0'>
                         <h2 className='text-xl font-semibold my-5 pl-5'>Popular Games</h2>
-                        <div className="card-container grid grid-cols-1 lg:grid-cols-4 gap-4">
+                        <div className="card-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             {
                                 top_3app.map(app => <GameCard key={app._id} app={app} />)
                             }

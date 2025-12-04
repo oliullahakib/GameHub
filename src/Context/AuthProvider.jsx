@@ -5,7 +5,9 @@ import { auth } from '../firebase/firebase.config';
 import Loading from '../Pages/Loading';
 
 const AuthProvider = ({ children }) => {
-    const googleProvider = new GoogleAuthProvider();
+    const googleProvider = new GoogleAuthProvider()
+    googleProvider.addScope('email')
+    googleProvider.addScope('profile')
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const creatUser = (email, password) => {
@@ -19,6 +21,7 @@ const AuthProvider = ({ children }) => {
         return updateProfile(user, userObj);
     };
     const googleLogin = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider);
     };
     const logOutUser = () => {
@@ -28,12 +31,14 @@ const AuthProvider = ({ children }) => {
     const resetPassword = (email)=>{
         return sendPasswordResetEmail(auth,email);
     }
+     
     useEffect(() => {
-        const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);
-            setLoading(false);
-        });
-        return unsubcribe;
+   const unsubscribe= onAuthStateChanged(auth,(currentUser)=>{
+        setUser(currentUser)
+        console.log(currentUser)
+        setLoading(false)
+     })
+     return unsubscribe
     }, [])
 
     const value = {
